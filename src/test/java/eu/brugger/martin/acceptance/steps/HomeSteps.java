@@ -2,7 +2,6 @@ package eu.brugger.martin.acceptance.steps;
 
 import cucumber.api.java8.En;
 import eu.brugger.martin.acceptance.framework.page.HomePage;
-import eu.brugger.martin.acceptance.framework.page.LoginPage;
 import org.junit.Assert;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
