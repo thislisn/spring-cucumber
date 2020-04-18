@@ -8,5 +8,8 @@ import org.springframework.test.context.ContextConfiguration;
 
 @ContextConfiguration(classes = TestConfiguration.class)
 public class CommonSteps implements En {
-    private static final Logger LOGGER = LoggerFactory.getLogger(LoginSteps.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CommonSteps.class);
+
+    public CommonSteps() {
+    }
 }
