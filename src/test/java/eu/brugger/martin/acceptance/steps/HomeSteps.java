@@ -21,6 +21,10 @@ public class HomeSteps implements En {
         Then("^I check that Home page is opened$", () -> {
             Assert.assertTrue("Home page is not opened", homePage.isOpened());
         });
+
+        When("^I search for \"?([^\"]*)\"?$", (String searchKey) -> {
+            homePage.searchAndSubmit(searchKey);
+        });
     }
 
 

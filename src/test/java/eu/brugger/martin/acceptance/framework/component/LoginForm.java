@@ -15,7 +15,6 @@ public class LoginForm extends BaseComponent {
     WebElement signInButton;
 
     public void setUsernameInput(String username){
-        usernameInput.isDisplayed();
         waiter.waitUntilWebElementDisplayed(usernameInput);
         usernameInput.sendKeys(username);
     }

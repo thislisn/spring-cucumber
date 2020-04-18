@@ -9,13 +9,13 @@ import org.springframework.stereotype.Component;
 import static eu.brugger.martin.acceptance.framework.utils.Waiter.TimeOutConstants.DEFAULT_TIMEOUT_5_000_MS;
 
 @Component
-public class HomePage extends BasePage {
+public class SearchResultsPage extends BasePage {
 
-    private String PAGE_URL = "%s/";
-    private static final String PAGE_HEADER = "Learn Git and GitHub without any code!";
-    public static final String PAGE_IDENTIFIER = "Home page";
+    private String PAGE_URL = "%s/search";
+    private static final String PAGE_HEADER = "repository results";
+    public static final String PAGE_IDENTIFIER = "repository results";
 
-    @FindBy(css = "h2.shelf-title")
+    @FindBy(css = ".codesearch-results h3")
     WebElement header;
 
     @Autowired
@@ -28,8 +28,8 @@ public class HomePage extends BasePage {
 
     @Override
     public boolean isOpened() {
-        boolean isUrlCorrect = String.format(PAGE_URL, baseUrl).equals(driverProvider.getInstance().getCurrentUrl());
-        boolean isHeaderCorrect = PAGE_HEADER.equals(header.getText());
+        boolean isUrlCorrect = driverProvider.getInstance().getCurrentUrl().contains(String.format(PAGE_URL, baseUrl));
+        boolean isHeaderCorrect = header.getText().contains(PAGE_HEADER);
         return isUrlCorrect && isHeaderCorrect;
     }
 
@@ -38,8 +38,8 @@ public class HomePage extends BasePage {
         waiter.waitUntilExpected(webDriver -> isOpened(), DEFAULT_TIMEOUT_5_000_MS);
     }
 
-    public void searchAndSubmit(String searchKey) {
-        searchPanel.setSearchInput(searchKey);
-        searchPanel.submitSearchInput();
+    public String getPageHeaderText(){
+        return header.getText();
     }
+
 }
