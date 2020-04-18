@@ -6,12 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 import static org.openqa.selenium.remote.BrowserType.CHROME;
 import static org.openqa.selenium.remote.BrowserType.FIREFOX;
 
 @Component
+//@Profile("chrome")
 public class DriverFactory {
     @Value("${browser}")
     private String browserName;

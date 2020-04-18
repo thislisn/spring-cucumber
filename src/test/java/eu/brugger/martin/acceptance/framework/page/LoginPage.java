@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
 
     @Value("${url.base}")
     private String baseUrl;
-    @Value("${user.login}")
+    @Value("${user.username}")
     private String username;
     @Value("${user.password}")
     private String password;

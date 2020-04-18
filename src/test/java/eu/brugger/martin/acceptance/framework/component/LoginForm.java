@@ -22,7 +22,7 @@ public class LoginForm extends BaseComponent {
 
     public void setPasswordInput(String password){
         waiter.waitUntilWebElementDisplayed(passwordInput);
-        usernameInput.sendKeys(password);
+        passwordInput.sendKeys(password);
     }
 
     public void clickSignInButton(){
