@@ -12,7 +12,7 @@ public class DriverProvider {
     private static ThreadLocal<WebDriver> driverInstance = new ThreadLocal<>();
 
     @Autowired
-    private ChromeDriverFactory driverFactory;
+    private DriverFactory driverFactory;
 
     public WebDriver getInstance() {
         if (driverInstance.get() == null) {
