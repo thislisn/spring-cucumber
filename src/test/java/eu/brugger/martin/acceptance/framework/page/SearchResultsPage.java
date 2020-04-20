@@ -12,14 +12,11 @@ import static eu.brugger.martin.acceptance.framework.utils.Waiter.TimeOutConstan
 public class SearchResultsPage extends BasePage {
 
     private String PAGE_URL = "%s/search";
-    private static final String PAGE_HEADER = "repository results";
-    public static final String PAGE_IDENTIFIER = "repository results";
+    private static final String PAGE_HEADER = "repository result";
+    public static final String PAGE_IDENTIFIER = "repository result";
 
     @FindBy(css = ".codesearch-results h3")
     WebElement header;
-
-    @Autowired
-    SearchPanel searchPanel;
 
     @Override
     public void open() {

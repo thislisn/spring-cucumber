@@ -14,7 +14,6 @@ public class SearchPanel extends BaseComponent {
     public void setSearchInput(String searchKey) {
         waiter.waitUntilWebElementDisplayed(searchInput);
         searchInput.sendKeys(searchKey);
-        searchInput.sendKeys(Keys.ENTER);
     }
 
     public void submitSearchInput() {

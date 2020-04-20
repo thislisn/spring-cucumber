@@ -7,4 +7,5 @@ Feature: search test with github
     And I wait for Home page loaded
     Then I check that Home page is opened
     When I search for "thislisn/cucumber-spring"
+    And I wait for Search Results page loaded
     Then I check that header name is "1 repository result"
