@@ -1,7 +1,7 @@
 package eu.brugger.martin.acceptance.steps;
 
-import cucumber.api.java8.En;
 import eu.brugger.martin.acceptance.framework.page.LoginPage;
+import io.cucumber.java8.En;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
