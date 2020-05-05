@@ -13,14 +13,13 @@ public class LoginSteps implements En {
     LoginPage loginPage;
 
     public LoginSteps() {
-        Given("^I open Login page of Github$", () -> {
+        Given("I open Login page of Github", () -> {
             loginPage.open();
         });
-        When("^I sign in with default credentials on Login page of Github$", () -> {
+        When("I sign in with default credentials on Login page of Github", () -> {
             loginPage.signIn();
         });
-
-        When("^I wait for Login page loaded$", () -> {
+        When("I wait for Login page loaded", () -> {
             loginPage.waitUntilPageOpened();
         });
     }

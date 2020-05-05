@@ -11,5 +11,6 @@ public class CommonSteps implements En {
     private static final Logger LOGGER = LoggerFactory.getLogger(CommonSteps.class);
 
     public CommonSteps() {
+
     }
 }

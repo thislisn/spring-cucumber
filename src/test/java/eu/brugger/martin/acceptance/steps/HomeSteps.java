@@ -14,11 +14,11 @@ public class HomeSteps implements En {
     HomePage homePage;
 
     public HomeSteps() {
-        When("^I wait for Home page loaded$", () -> {
+        When("I wait for Home page loaded", () -> {
             homePage.waitUntilPageOpened();
         });
 
-        Then("^I check that Home page is opened$", () -> {
+        Then("I check that Home page is opened", () -> {
             Assert.assertTrue("Home page is not opened", homePage.isOpened());
         });
 

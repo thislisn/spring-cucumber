@@ -17,11 +17,11 @@ public class SearchResultsSteps implements En {
     SearchResultsPage searchResultsPage;
 
     public SearchResultsSteps() {
-        When("^I wait for Search Results page loaded$", () -> {
+        When("I wait for Search Results page loaded", () -> {
             searchResultsPage.waitUntilPageOpened();
         });
 
-        Then("^I check that Search results page is opened$", () -> {
+        Then("I check that Search results page is opened", () -> {
             Assert.assertTrue("Search results page is not opened", searchResultsPage.isOpened());
         });
 
