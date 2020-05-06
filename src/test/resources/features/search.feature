@@ -1,6 +1,6 @@
 Feature: search test with github
 
-  Scenario: Login on Github
+  Scenario: Login snd search repo on Github
     Given I open Login page of Github
     When I wait for Login page loaded
     And I sign in with default credentials on Login page of Github

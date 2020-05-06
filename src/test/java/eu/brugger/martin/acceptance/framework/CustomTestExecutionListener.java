@@ -1,5 +1,6 @@
 package eu.brugger.martin.acceptance.framework;
 
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.TestContext;
 import org.springframework.test.context.TestExecutionListener;
 
@@ -7,7 +8,6 @@ public class CustomTestExecutionListener implements TestExecutionListener {
 
     @Override
     public void beforeTestClass(TestContext testContext) throws Exception {
-        System.out.println("before test class");
     }
 
     @Override
@@ -24,13 +24,12 @@ public class CustomTestExecutionListener implements TestExecutionListener {
 
     @Override
     public void afterTestMethod(TestContext testContext) throws Exception {
-        System.out.println("after test method");
+        testContext.markApplicationContextDirty(DirtiesContext.HierarchyMode.EXHAUSTIVE);
 
     }
 
     @Override
     public void afterTestClass(TestContext testContext) throws Exception {
-        System.out.println("after test class");
 
     }
 }
